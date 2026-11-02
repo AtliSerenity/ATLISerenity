@@ -91,32 +91,34 @@
         .hover-lift {
             transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .hover-lift:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px -10px rgba(211, 17, 28, 0.12);
+        @media (hover: hover) and (pointer: fine) {
+            .hover-lift:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 30px -10px rgba(211, 17, 28, 0.12);
+            }
         }
     </style>
 </head>
 <body class="bg-gray-50 text-atliCharcoal font-sans antialiased selection:bg-atliRed selection:text-white">
 
     <!-- Top Contact, Trust & Location Bar -->
-    <div class="bg-atliCharcoal text-white text-xs py-2 px-4 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
-            <span class="flex items-center gap-3 flex-wrap text-center md:text-left">
+    <div class="bg-atliCharcoal text-white text-xs py-2.5 px-3 sm:px-6 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
+            <span class="flex items-center justify-center md:justify-start gap-2 flex-wrap">
                 <span><i class="fas fa-phone-alt text-atliRed mr-1"></i> Helpline: +256 (0)393 003 399</span>
                 <span class="hidden lg:inline text-gray-500">|</span>
                 <span class="text-atliGold font-semibold"><i class="fas fa-map-marker-alt mr-1"></i> HQ: Market St, Water Village, Tororo (Near Sofitel Hotel)</span>
             </span>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center justify-center gap-3">
                 <span class="text-gray-400">Connect:</span>
-                <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-atliRed text-white w-6 h-6 rounded-full flex items-center justify-center transition-colors" title="YouTube Channel">
-                    <i class="fab fa-youtube text-[11px]"></i>
+                <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-atliRed text-white w-7 h-7 rounded-full flex items-center justify-center transition-colors" title="YouTube Channel">
+                    <i class="fab fa-youtube text-xs"></i>
                 </a>
-                <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-atliRed text-white w-6 h-6 rounded-full flex items-center justify-center transition-colors" title="TikTok Profile">
-                    <i class="fab fa-tiktok text-[11px]"></i>
+                <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-atliRed text-white w-7 h-7 rounded-full flex items-center justify-center transition-colors" title="TikTok Profile">
+                    <i class="fab fa-tiktok text-xs"></i>
                 </a>
-                <a href="https://wa.me/256761480472?text=Hello%20ATLI%20Serenity,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center transition-colors" title="WhatsApp Chat">
-                    <i class="fab fa-whatsapp text-[11px]"></i>
+                <a href="https://wa.me/256761480472?text=Hello%20ATLI%20Serenity,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-green-600 text-white w-7 h-7 rounded-full flex items-center justify-center transition-colors" title="WhatsApp Chat">
+                    <i class="fab fa-whatsapp text-xs"></i>
                 </a>
             </div>
         </div>
@@ -128,7 +130,7 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Brand Logo (Clicking returns to top dashboard / hero view) -->
                 <a href="#" onclick="returnToDashboard(event)" class="flex items-center gap-3 group cursor-pointer" title="Return to Main Dashboard">
-                    <div class="relative w-12 h-12 flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-md group-hover:scale-110 transition-transform duration-300 overflow-hidden p-1">
+                    <div class="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden p-1">
                         <svg class="w-full h-full animate-float" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ATLI Serenity Logo">
                             <path d="M100 15L175 165H145L125 125H75L55 165H25L100 15Z" fill="#D3111C"/>
                             <path d="M100 55L120 95H80L100 55Z" fill="white"/>
@@ -136,8 +138,8 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="text-xl sm:text-2xl font-black tracking-tight text-atliCharcoal">ATLI <span class="text-atliRed">SERENITY</span></span>
-                        <p class="text-[10px] font-semibold tracking-widest uppercase text-gray-500">Events & Logistics Ltd</p>
+                        <span class="text-lg sm:text-2xl font-black tracking-tight text-atliCharcoal">ATLI <span class="text-atliRed">SERENITY</span></span>
+                        <p class="text-[9px] sm:text-[10px] font-semibold tracking-widest uppercase text-gray-500">Events & Logistics Ltd</p>
                     </div>
                 </a>
 
@@ -153,38 +155,40 @@
 
                 <!-- Phone CTA Button triggering Booking Modal -->
                 <div class="hidden md:flex items-center gap-4">
-                    <button onclick="openBookingModal()" class="bg-atliRed hover:bg-atliRed-dark text-white font-bold px-5 py-2.5 rounded-xl shadow-md transition-all flex items-center gap-2 text-sm cursor-pointer">
+                    <button onclick="openBookingModal()" class="bg-atliRed hover:bg-atliRed-dark text-white font-bold px-5 py-2.5 rounded-xl shadow-md transition-all flex items-center gap-2 text-sm cursor-pointer min-h-[44px]">
                         <i class="fas fa-phone-alt animate-bounce"></i> Book Execution
                     </button>
                 </div>
 
                 <!-- Mobile Menu Toggle -->
-                <button id="menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden text-gray-700 hover:text-atliRed focus:outline-none text-2xl">
+                <button id="menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden text-gray-700 hover:text-atliRed focus:outline-none text-2xl p-2 min-h-[44px] min-w-[44px] flex items-center justify-center">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
-            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Services & Pricing</a>
-            <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Quote Estimator</a>
-            <a href="#leadership" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Leadership</a>
-            <a href="#feedback" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Testimonials</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">About Us</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Contact Us</a>
-            <div class="pt-2 flex items-center gap-3 border-t border-gray-100">
-                <span class="text-xs text-gray-500 font-medium">Socials:</span>
-                <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="text-atliRed text-base"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="text-atliCharcoal text-base"><i class="fab fa-tiktok"></i></a>
-                <a href="https://wa.me/256761480472" target="_blank" rel="noopener noreferrer" class="text-green-600 text-base"><i class="fab fa-whatsapp"></i></a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-5 pt-3 pb-6 space-y-3 shadow-xl">
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2.5 font-semibold text-gray-700 hover:text-atliRed border-b border-gray-100">Services & Pricing</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2.5 font-semibold text-gray-700 hover:text-atliRed border-b border-gray-100">Quote Estimator</a>
+            <a href="#leadership" onclick="toggleMobileMenu()" class="block py-2.5 font-semibold text-gray-700 hover:text-atliRed border-b border-gray-100">Leadership</a>
+            <a href="#feedback" onclick="toggleMobileMenu()" class="block py-2.5 font-semibold text-gray-700 hover:text-atliRed border-b border-gray-100">Testimonials</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2.5 font-semibold text-gray-700 hover:text-atliRed border-b border-gray-100">About Us</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2.5 font-semibold text-gray-700 hover:text-atliRed">Contact Us</a>
+            <div class="pt-3 flex items-center justify-between border-t border-gray-100">
+                <span class="text-xs text-gray-500 font-medium">Social Handles:</span>
+                <div class="flex items-center gap-3">
+                    <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="text-atliRed text-lg p-1"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="text-atliCharcoal text-lg p-1"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/256761480472" target="_blank" rel="noopener noreferrer" class="text-green-600 text-lg p-1"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full mt-2 bg-atliRed text-white font-bold py-2.5 rounded-xl text-sm">Book Execution</button>
+            <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full mt-2 bg-atliRed text-white font-bold py-3 rounded-xl text-sm min-h-[44px]">Book Execution</button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero-dashboard" class="relative bg-atliCharcoal text-white overflow-hidden py-24 lg:py-32">
+    <section id="hero-dashboard" class="relative bg-atliCharcoal text-white overflow-hidden py-20 sm:py-24 lg:py-32">
         <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D3111C_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-atliCharcoal via-atliCharcoal/90 to-transparent z-10"></div>
         <div class="absolute inset-0 bg-cover bg-center opacity-35 scale-105" style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1920&q=80');"></div>
@@ -194,17 +198,17 @@
                 <span class="bg-atliRed/20 border border-atliRed/40 text-atliRed-light px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block shadow-sm">
                     <i class="fas fa-star text-atliGold mr-1"></i> Premier Indoor & Outdoor Events Partner
                 </span>
-                <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight mb-6">
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
                     Crafting your Indoor & Outdoor Events with <span class="text-atliRed">Peace of Mind</span>
                 </h1>
-                <p class="text-base sm:text-lg text-gray-300 mb-8 font-light leading-relaxed">
+                <p class="text-sm sm:text-base lg:text-lg text-gray-300 mb-8 font-light leading-relaxed">
                     Delivering acoustic clarity, high-capacity tent setups, professional turntables, and high quality media production dispatched locally from our Tororo & Nagongera warehouses.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#calculator" class="bg-atliRed hover:bg-atliRed-dark text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-all text-center flex items-center justify-center gap-2">
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <a href="#calculator" class="bg-atliRed hover:bg-atliRed-dark text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-all text-center flex items-center justify-center gap-2 min-h-[48px]">
                         <i class="fas fa-calculator"></i> Calculate Instant Quote
                     </a>
-                    <button onclick="openBookingModal()" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2 cursor-pointer">
+                    <button onclick="openBookingModal()" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2 cursor-pointer min-h-[48px]">
                         <i class="fas fa-phone-alt"></i> Contact & Direct Booking
                     </button>
                 </div>
@@ -213,12 +217,12 @@
     </section>
 
     <!-- 1. SERVICES & PRICING CATALOG -->
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-16 sm:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
                 <span class="text-atliRed font-bold text-xs uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">Official Pricing Catalog</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-atliCharcoal mt-3">Audiovisual, Logistics & Media Packages</h2>
-                <p class="text-gray-600 mt-2">Transparent, fixed rates with no hidden fees for both indoor halls and outdoor grounds.</p>
+                <h2 class="text-2xl sm:text-4xl font-black text-atliCharcoal mt-3">Audiovisual, Logistics & Media Packages</h2>
+                <p class="text-gray-600 text-sm mt-2">Transparent, fixed rates with no hidden fees for both indoor halls and outdoor grounds.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -288,12 +292,11 @@
                     </div>
                 </div>
 
-                <!-- Media Coverage (Single Captivating Video Camcorder Image) -->
+                <!-- Media Coverage -->
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift flex flex-col justify-between">
                     <div>
                         <div class="h-56 overflow-hidden relative bg-black">
                             <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=800&q=80" alt="Professional broadcast video camcorder on tripod with microphone" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            <span class="absolute bottom-3 left-3 bg-black/80 text-white text-[10px] px-2.5 py-1 rounded-lg font-bold">High Quality Video Rig</span>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-atliCharcoal mb-2">Media Coverage</h3>
@@ -328,19 +331,19 @@
     </section>
 
     <!-- 2. INSTANT QUOTE ESTIMATOR -->
-    <section id="calculator" class="py-20 bg-gray-50 border-t border-gray-200">
+    <section id="calculator" class="py-16 sm:py-20 bg-gray-50 border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-atliRed font-bold text-xs uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">Instant Planner</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-atliCharcoal mt-3">Event Quote Estimator</h2>
-                <p class="text-gray-600 mt-2">Select your sound reinforcement, logistics, tents, and media packages for an immediate estimate.</p>
+                <h2 class="text-2xl sm:text-4xl font-black text-atliCharcoal mt-3">Event Quote Estimator</h2>
+                <p class="text-gray-600 text-sm mt-2">Select your sound reinforcement, logistics, tents, and media packages for an immediate estimate.</p>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded-3xl p-6 sm:p-10 shadow-lg">
+            <div class="bg-white border border-gray-200 rounded-3xl p-5 sm:p-10 shadow-lg">
                 <div class="space-y-6">
                     <div>
                         <label class="block text-sm font-bold text-atliCharcoal mb-2">1. Select Sound / PA System Scale</label>
-                        <select id="audio-select" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-atliRed focus:outline-none">
+                        <select id="audio-select" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-atliRed focus:outline-none min-h-[44px]">
                             <option value="0">None / Media & Logistics Only</option>
                             <option value="400000">Funeral Audio / Half Day Audio (400,000/=)</option>
                             <option value="600000">Small Venue Audio System (600,000/=)</option>
@@ -352,45 +355,45 @@
                     <div>
                         <label class="block text-sm font-bold text-atliCharcoal mb-2">2. Additional Logistics, Tents & Media Coverage (Select all that apply)</label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="150000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">15KVA Generator Backup (150,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">15KVA Generator Backup (150,000/=)</span>
                             </label>
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="100000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">100-Seater Tent Setup (100,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">100-Seater Tent Setup (100,000/=)</span>
                             </label>
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="20000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">Tent Side Covers (20,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">Tent Side Covers (20,000/=)</span>
                             </label>
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="60000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">Plastic Seats 100-pack (60,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">Plastic Seats 100-pack (60,000/=)</span>
                             </label>
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="20000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">Plastic Seat Covers 100-pack (20,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">Plastic Seat Covers 100-pack (20,000/=)</span>
                             </label>
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="550000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">Basic Photography (550,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">Basic Photography (550,000/=)</span>
                             </label>
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="1100000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">Standard Photography (1,100,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">Standard Photography (1,100,000/=)</span>
                             </label>
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="1600000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">Max Photography w/ Photobook (1,600,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">Max Photography w/ Photobook (1,600,000/=)</span>
                             </label>
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="300000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">Videography Highlight &lt;4 hrs (300,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">Videography Highlight &lt;4 hrs (300,000/=)</span>
                             </label>
-                            <label class="flex items-center gap-3 bg-gray-50 p-3 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
+                            <label class="flex items-center gap-3 bg-gray-50 p-3.5 rounded-xl border border-gray-200 cursor-pointer hover:border-atliRed">
                                 <input type="checkbox" value="1700000" class="addon-checkbox w-4 h-4 text-atliRed rounded focus:ring-atliRed">
-                                <span class="text-sm font-medium">Platinum Videography w/ Aerial Shots (1,700,000/=)</span>
+                                <span class="text-xs sm:text-sm font-medium">Platinum Videography w/ Aerial Shots (1,700,000/=)</span>
                             </label>
                         </div>
                     </div>
@@ -400,7 +403,7 @@
                             <span class="text-xs uppercase font-bold text-gray-500 block">Total Estimated Package</span>
                             <span id="quote-total" class="text-2xl sm:text-3xl font-black text-atliRed">Ugx. 0/=</span>
                         </div>
-                        <button onclick="openBookingModal()" class="w-full sm:w-auto bg-atliRed hover:bg-atliRed-dark text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all text-center text-sm cursor-pointer">
+                        <button onclick="openBookingModal()" class="w-full sm:w-auto bg-atliRed hover:bg-atliRed-dark text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all text-center text-sm cursor-pointer min-h-[44px]">
                             Book This Package
                         </button>
                     </div>
@@ -410,11 +413,11 @@
     </section>
 
     <!-- 3. LEADERSHIP TEAM -->
-    <section id="leadership" class="py-20 bg-white border-t border-gray-200">
+    <section id="leadership" class="py-16 sm:py-20 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
                 <span class="text-atliRed font-bold text-xs uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">Executive Leadership</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-atliCharcoal mt-3">Meet Our Leadership Team</h2>
+                <h2 class="text-2xl sm:text-4xl font-black text-atliCharcoal mt-3">Meet Our Leadership Team</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -461,11 +464,11 @@
     </section>
 
     <!-- 4. CLIENT TESTIMONIALS -->
-    <section id="feedback" class="py-20 bg-gray-50 border-t border-gray-200">
+    <section id="feedback" class="py-16 sm:py-20 bg-gray-50 border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
                 <span class="text-atliRed font-bold text-xs uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">Testimonials</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-atliCharcoal mt-3">What Our Clients Say</h2>
+                <h2 class="text-2xl sm:text-4xl font-black text-atliCharcoal mt-3">What Our Clients Say</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -488,21 +491,21 @@
         </div>
     </section>
 
-    <!-- 5. ABOUT US, WAREHOUSES & REGISTRATION DOCUMENTS -->
-    <section id="about" class="py-20 bg-white border-t border-gray-200">
+    <!-- 5. ABOUT US, WAREHOUSES & REGISTRATION CERTIFICATES -->
+    <section id="about" class="py-16 sm:py-20 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
                 <span class="text-atliRed font-bold text-xs uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">Company Background</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-atliCharcoal mt-3">About Us, Warehouses & Legal Compliance</h2>
-                <p class="text-gray-600 mt-2">Serving indoor and outdoor events with proximity, reliability, and full statutory accreditation.</p>
+                <h2 class="text-2xl sm:text-4xl font-black text-atliCharcoal mt-3">About Us, Warehouses & Legal Compliance</h2>
+                <p class="text-gray-600 text-sm mt-2">Serving indoor and outdoor events with proximity, reliability, and full statutory accreditation.</p>
             </div>
 
             <!-- Single Consolidated Warehouses Block -->
-            <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8 mb-12 shadow-sm">
-                <h3 class="text-xl font-bold text-atliCharcoal mb-3 flex items-center gap-2">
+            <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm">
+                <h3 class="text-lg sm:text-xl font-bold text-atliCharcoal mb-3 flex items-center gap-2">
                     <i class="fas fa-warehouse text-atliRed"></i> Dual Warehouses (Tororo & Nagongera)
                 </h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
                     All warehouses store all similar equipment; they are just meant for clients to extend services nearer to the clients depending on where the events are being hosted (indoor halls or outdoor grounds).
                 </p>
                 <p class="text-xs text-atliCharcoal font-semibold">
@@ -510,62 +513,57 @@
                 </p>
             </div>
 
-            <!-- Original Registration & Statutory Document Extracts -->
+            <!-- Registration Certificates Grid (Clean Visual Display with Names) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- URSB Document Extract Card -->
-                <div class="bg-atliCharcoal text-white p-8 rounded-3xl shadow-sm flex flex-col justify-between hover-lift">
+                <!-- URSB Certificate -->
+                <div class="bg-atliCharcoal text-white rounded-3xl p-6 shadow-md flex flex-col justify-between hover-lift">
                     <div>
-                        <div class="w-12 h-12 bg-atliRed text-white rounded-2xl flex items-center justify-center mb-6 text-lg">
-                            <i class="fas fa-certificate"></i>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-atliGold">Statutory Document</span>
+                            <span class="bg-atliRed/20 text-atliRed-light text-[10px] font-bold px-2 py-0.5 rounded">Reg No: 80034063692986</span>
                         </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-atliGold">Official Government Extract</span>
-                        <h4 class="text-lg font-bold mt-1 mb-2">URSB Certificate of Incorporation</h4>
-                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
-                            <strong>Entity:</strong> ATLI SERENITY EVENTS AND LOGISTICS LTD<br>
-                            <strong>Reg No:</strong> 80034063692986<br>
-                            <strong>Act:</strong> Companies Act 2012 (Uganda)
-                        </p>
-                    </div>
-                    <div class="bg-white/10 p-3 rounded-xl text-xs text-amber-300 font-semibold text-center border border-white/10">
-                        <i class="fas fa-check-circle mr-1"></i> Certified True Copy by Registrar General
+                        <h4 class="text-lg font-bold mb-4">URSB Certificate of Incorporation</h4>
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-inner h-64 border border-gray-700 relative flex items-center justify-center p-2">
+                            <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" alt="URSB Certificate of Incorporation Document" class="w-full h-full object-cover rounded-xl opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                                <p class="text-xs text-white font-semibold"><i class="fas fa-check-circle text-amber-400 mr-1"></i> ATLI Serenity Events and Logistics Limited</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- NSSF Document Extract Card -->
-                <div class="bg-atliCharcoal text-white p-8 rounded-3xl shadow-sm flex flex-col justify-between hover-lift">
+                <!-- NSSF Certificate -->
+                <div class="bg-atliCharcoal text-white rounded-3xl p-6 shadow-sm flex flex-col justify-between hover-lift">
                     <div>
-                        <div class="w-12 h-12 bg-atliRed text-white rounded-2xl flex items-center justify-center mb-6 text-lg">
-                            <i class="fas fa-shield-halved"></i>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-atliGold">Statutory Document</span>
+                            <span class="bg-atliRed/20 text-atliRed-light text-[10px] font-bold px-2 py-0.5 rounded">Employer No: NS043016</span>
                         </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-atliGold">Statutory Compliance</span>
-                        <h4 class="text-lg font-bold mt-1 mb-2">NSSF Employer Registration</h4>
-                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
-                            <strong>Organization:</strong> ATLI SERENITY EVENTS AND LOGISTICS LTD<br>
-                            <strong>Employer No:</strong> NS043016<br>
-                            <strong>Statute:</strong> NSSF Act (CAP 222)
-                        </p>
-                    </div>
-                    <div class="bg-white/10 p-3 rounded-xl text-xs text-amber-300 font-semibold text-center border border-white/10">
-                        <i class="fas fa-check-circle mr-1"></i> Registered Contributing Employer
+                        <h4 class="text-lg font-bold mb-4">NSSF Employer Registration Certificate</h4>
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-inner h-64 border border-gray-700 relative flex items-center justify-center p-2">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="NSSF Employer Registration Certificate Document" class="w-full h-full object-cover rounded-xl opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                                <p class="text-xs text-white font-semibold"><i class="fas fa-check-circle text-amber-400 mr-1"></i> National Social Security Fund Uganda</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- URA Tax Compliance Placeholder Card -->
-                <div class="bg-atliCharcoal text-white p-8 rounded-3xl shadow-sm flex flex-col justify-between hover-lift border-2 border-dashed border-gray-700">
+                <!-- URA Placeholder Certificate -->
+                <div class="bg-atliCharcoal text-white rounded-3xl p-6 shadow-sm flex flex-col justify-between hover-lift border-2 border-dashed border-gray-700">
                     <div>
-                        <div class="w-12 h-12 bg-gray-800 text-atliGold rounded-2xl flex items-center justify-center mb-6 text-lg border border-gray-700">
-                            <i class="fas fa-file-invoice-dollar"></i>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-atliGold">Tax Portal</span>
+                            <span class="bg-gray-800 text-atliGold text-[10px] font-bold px-2 py-0.5 rounded border border-gray-700">Active Profile</span>
                         </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-atliGold">Tax Revenue Portal</span>
-                        <h4 class="text-lg font-bold mt-1 mb-2">URA Tax Clearance & TIN</h4>
-                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
-                            <strong>Authority:</strong> Uganda Revenue Authority (URA)<br>
-                            <strong>Status:</strong> Active Taxpayer Profile<br>
-                            <strong>Document:</strong> Tax Clearance Certificate (TCC)
-                        </p>
-                    </div>
-                    <div class="bg-white/10 p-3 rounded-xl text-xs text-gray-300 font-semibold text-center border border-white/10">
-                        <i class="fas fa-info-circle mr-1 text-atliGold"></i> Verified Active URA Account
+                        <h4 class="text-lg font-bold mb-4">URA Tax Clearance Certificate (TCC)</h4>
+                        <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-inner h-64 border border-gray-800 relative flex flex-col items-center justify-center p-6 text-center">
+                            <div class="w-14 h-14 bg-gray-800 text-atliGold rounded-2xl flex items-center justify-center text-2xl mb-3 border border-gray-700 shadow-sm">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <p class="text-sm font-bold text-white mb-1">Uganda Revenue Authority</p>
+                            <p class="text-[11px] text-gray-400">Tax Clearance & Active TIN Profile Placeholder</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -573,15 +571,15 @@
     </section>
 
     <!-- 6. CONTACT & BOOKING -->
-    <section id="contact" class="py-20 bg-gray-50 border-t border-gray-200">
+    <section id="contact" class="py-16 sm:py-20 bg-gray-50 border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-atliRed font-bold text-xs uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">Get in Touch</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-atliCharcoal mt-3">Let's Craft Your Next Indoor or Outdoor Event</h2>
-                <p class="text-gray-600 mt-2">Call +256 (0)393 003 399 or send your inquiry below. <span class="text-atliRed font-semibold">* Required fields.</span></p>
+                <h2 class="text-2xl sm:text-4xl font-black text-atliCharcoal mt-3">Let's Craft Your Next Indoor or Outdoor Event</h2>
+                <p class="text-gray-600 text-sm mt-2">Call +256 (0)393 003 399 or send your inquiry below. <span class="text-atliRed font-semibold">* Required fields.</span></p>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded-3xl p-8 shadow-lg">
+            <div class="bg-white border border-gray-200 rounded-3xl p-6 sm:p-10 shadow-lg">
                 <form id="inquiry-form" action="https://formsubmit.co/atliserenityeventsandlogistics@gmail.com" method="POST" class="space-y-4" novalidate>
                     <input type="hidden" name="_subject" value="New Event Inquiry - ATLI Serenity Website">
                     <input type="hidden" name="_template" value="table">
@@ -592,28 +590,28 @@
 
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Your Full Name <span class="text-atliRed">*</span></label>
-                        <input type="text" id="field-name" name="Full Name" required placeholder="e.g. John Mukasa" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
+                        <input type="text" id="field-name" name="Full Name" required placeholder="e.g. John Mukasa" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed min-h-[44px]">
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Phone Number <span class="text-atliRed">*</span></label>
-                            <input type="tel" id="field-phone" name="Phone Number" required placeholder="e.g. +256 700 000 000" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
+                            <input type="tel" id="field-phone" name="Phone Number" required placeholder="e.g. +256 700 000 000" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed min-h-[44px]">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Event Date <span class="text-atliRed">*</span></label>
-                            <input type="date" id="field-date" name="Event Date" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
+                            <input type="date" id="field-date" name="Event Date" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed min-h-[44px]">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Email Address <span class="text-gray-400 font-normal">(Optional)</span></label>
-                            <input type="email" id="field-email" name="Email Address" placeholder="e.g. client@example.com" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
+                            <input type="email" id="field-email" name="Email Address" placeholder="e.g. client@example.com" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed min-h-[44px]">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">TIN - Tax Identification Number <span class="text-gray-400 font-normal">(Optional)</span></label>
-                            <input type="text" name="TIN Number" placeholder="e.g. 1000xxxxxx" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
+                            <input type="text" name="TIN Number" placeholder="e.g. 1000xxxxxx" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed min-h-[44px]">
                         </div>
                     </div>
 
@@ -624,7 +622,7 @@
 
                     <!-- Functional Checkbox to Send Copy to Client's Email -->
                     <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start gap-3">
-                        <input type="checkbox" id="send-copy-checkbox" name="_cc" value="" class="w-4 h-4 text-atliRed rounded focus:ring-atliRed mt-0.5">
+                        <input type="checkbox" id="send-copy-checkbox" name="_cc" value="" class="w-5 h-5 text-atliRed rounded focus:ring-atliRed mt-0.5 shrink-0">
                         <label for="send-copy-checkbox" class="text-xs font-medium text-gray-700 cursor-pointer">
                             <strong>Send a copy of this inquiry / booking summary to my provided email</strong> (Requires email address above).
                         </label>
@@ -635,7 +633,7 @@
                         <i class="fas fa-exclamation-circle text-base"></i> Please fill in all mandatory fields before submitting your inquiry.
                     </div>
 
-                    <button type="submit" class="w-full bg-atliRed hover:bg-atliRed-dark text-white font-bold py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center justify-center gap-2 cursor-pointer">
+                    <button type="submit" class="w-full bg-atliRed hover:bg-atliRed-dark text-white font-bold py-4 rounded-xl shadow-lg transition-all text-sm flex items-center justify-center gap-2 cursor-pointer min-h-[48px]">
                         <i class="fas fa-paper-plane"></i> Submit Inquiry to Email
                     </button>
                 </form>
@@ -645,9 +643,9 @@
 
     <!-- Footer -->
     <footer class="bg-black text-gray-400 py-12 border-t border-gray-900 text-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center p-1 border border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+                <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center p-1 border border-gray-800 shrink-0">
                     <svg class="w-full h-full animate-float" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M100 15L175 165H145L125 125H75L55 165H25L100 15Z" fill="#D3111C"/>
                         <path d="M100 55L120 95H80L100 55Z" fill="white"/>
@@ -655,26 +653,26 @@
                     </svg>
                 </div>
                 <div>
-                    <span class="text-white font-bold">ATLI SERENITY EVENTS AND LOGISTICS LTD</span>
-                    <p class="text-[10px]">Market St, Water Village, Tororo Town (Near Sofitel Hotel). URSB Reg: 80034063692986 | NSSF: NS043016</p>
+                    <span class="text-white font-bold block">ATLI SERENITY EVENTS AND LOGISTICS LTD</span>
+                    <p class="text-[10px] mt-0.5">Market St, Water Village, Tororo Town (Near Sofitel Hotel). URSB Reg: 80034063692986 | NSSF: NS043016</p>
                 </div>
             </div>
             
             <!-- Social Handles in Footer -->
-            <div class="flex items-center gap-4">
+            <div class="flex items-center justify-center gap-4">
                 <span class="text-gray-400 font-semibold">Follow Us:</span>
-                <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-gray-900 hover:bg-atliRed text-white rounded-lg flex items-center justify-center transition-colors" title="YouTube">
+                <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-gray-900 hover:bg-atliRed text-white rounded-lg flex items-center justify-center transition-colors" title="YouTube">
                     <i class="fab fa-youtube text-sm"></i>
                 </a>
-                <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-gray-900 hover:bg-atliRed text-white rounded-lg flex items-center justify-center transition-colors" title="TikTok">
+                <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-gray-900 hover:bg-atliRed text-white rounded-lg flex items-center justify-center transition-colors" title="TikTok">
                     <i class="fab fa-tiktok text-sm"></i>
                 </a>
-                <a href="https://wa.me/256761480472" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-gray-900 hover:bg-green-600 text-white rounded-lg flex items-center justify-center transition-colors" title="WhatsApp">
+                <a href="https://wa.me/256761480472" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-gray-900 hover:bg-green-600 text-white rounded-lg flex items-center justify-center transition-colors" title="WhatsApp">
                     <i class="fab fa-whatsapp text-sm"></i>
                 </a>
             </div>
 
-            <div class="text-center md:text-right">
+            <div class="text-center md:text-right text-gray-500">
                 <p>&copy; 2026 ATLI Serenity Events and Logistics Ltd. All rights reserved.</p>
             </div>
         </div>
@@ -682,22 +680,22 @@
 
     <!-- Booking Modal Popup Component -->
     <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden px-4">
-        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl relative border border-gray-100 animate-in fade-in zoom-in duration-200">
-            <button onclick="closeBookingModal()" aria-label="Close modal" class="absolute top-5 right-5 text-gray-400 hover:text-atliCharcoal text-xl">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-gray-100 animate-in fade-in zoom-in duration-200">
+            <button onclick="closeBookingModal()" aria-label="Close modal" class="absolute top-5 right-5 text-gray-400 hover:text-atliCharcoal text-xl p-2 min-h-[44px] min-w-[44px] flex items-center justify-center">
                 <i class="fas fa-times"></i>
             </button>
             <div class="text-center mb-6">
                 <div class="w-12 h-12 bg-red-50 text-atliRed rounded-2xl flex items-center justify-center mx-auto mb-3 text-lg">
                     <i class="fas fa-headset"></i>
                 </div>
-                <h3 class="text-2xl font-black text-atliCharcoal">Book ATLI Serenity Execution</h3>
+                <h3 class="text-xl sm:text-2xl font-black text-atliCharcoal">Book ATLI Serenity Execution</h3>
                 <p class="text-gray-500 text-xs mt-1">Choose your preferred channel to connect with our operations team instantly.</p>
             </div>
 
             <div class="space-y-3">
-                <a href="tel:+256393003399" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-atliRed rounded-2xl transition-all group">
+                <a href="tel:+256393003399" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-atliRed rounded-2xl transition-all group min-h-[52px]">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-atliRed text-white rounded-xl flex items-center justify-center text-sm shadow-sm">
+                        <div class="w-10 h-10 bg-atliRed text-white rounded-xl flex items-center justify-center text-sm shadow-sm shrink-0">
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div>
@@ -708,22 +706,22 @@
                     <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
                 </a>
 
-                <a href="mailto:atliserenityeventsandlogistics@gmail.com?subject=Inquiry%20-%20ATLI%20Serenity%20Events" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-atliRed rounded-2xl transition-all group">
+                <a href="mailto:atliserenityeventsandlogistics@gmail.com?subject=Inquiry%20-%20ATLI%20Serenity%20Events" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-atliRed rounded-2xl transition-all group min-h-[52px]">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-atliCharcoal text-white rounded-xl flex items-center justify-center text-sm shadow-sm">
+                        <div class="w-10 h-10 bg-atliCharcoal text-white rounded-xl flex items-center justify-center text-sm shadow-sm shrink-0">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
                             <span class="block text-sm font-bold text-atliCharcoal group-hover:text-atliRed">Send Email</span>
-                            <span class="text-[11px] text-gray-500">atliserenityeventsandlogistics@gmail.com</span>
+                            <span class="text-[11px] text-gray-500 truncate max-w-[180px] sm:max-w-xs block">atliserenityeventsandlogistics@gmail.com</span>
                         </div>
                     </div>
                     <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
                 </a>
 
-                <a href="https://wa.me/256761480472?text=Hello%20ATLI%20Serenity,%20I%20would%20like%20to%20book%20an%20event%20execution%20package." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-600 rounded-2xl transition-all group">
+                <a href="https://wa.me/256761480472?text=Hello%20ATLI%20Serenity,%20I%20would%20like%20to%20book%20an%20event%20execution%20package." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-600 rounded-2xl transition-all group min-h-[52px]">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-green-600 text-white rounded-xl flex items-center justify-center text-sm shadow-sm">
+                        <div class="w-10 h-10 bg-green-600 text-white rounded-xl flex items-center justify-center text-sm shadow-sm shrink-0">
                             <i class="fab fa-whatsapp"></i>
                         </div>
                         <div>
