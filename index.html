@@ -89,7 +89,6 @@
         }
     </script>
     <style>
-        /* Modern Block UI Styles */
         .info-block {
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid rgba(229, 231, 235, 0.8);
@@ -103,10 +102,6 @@
         }
         .block-container {
             scroll-margin-top: 5rem;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
         }
     </style>
 </head>
@@ -139,9 +134,9 @@
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Brand Logo -->
+                <!-- Brand Logo (Corrected Aspect Ratio & Clean Fit) -->
                 <a href="#" onclick="returnToDashboard(event)" class="flex items-center gap-3 group cursor-pointer" title="Return to Main Dashboard">
-                    <div class="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white border border-gray-200 rounded-2xl shadow-sm group-hover:scale-105 transition-transform duration-300 overflow-hidden p-1">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300 overflow-hidden p-1.5">
                         <img src="ATLI%20SERENITY%20LOGO.jpeg" alt="ATLI Serenity Logo" class="w-full h-full object-contain">
                     </div>
                     <div>
@@ -533,13 +528,13 @@
                 </p>
             </div>
 
-            <!-- Certificates Cards -->
+            <!-- Certificates Cards (Fixed paths matching exact uploaded names: URSB Certificate.jpg, NSSF Certificate.jpg, TIN Certificate.jpg) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- URSB Certificate -->
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden group hover:border-atliRed/40 transition-all flex flex-col justify-between">
                     <div>
                         <div class="relative h-72 overflow-hidden bg-gray-200">
-                            <img src="URSB%20Certificate.jpg" alt="URSB Certificate of Incorporation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <img src="URSB%20Certificate.jpg" alt="URSB Certificate of Incorporation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80';">
                         </div>
                         <div class="p-5">
                             <h3 class="text-lg font-bold text-atliCharcoal mb-0.5">URSB Certificate of Incorporation</h3>
@@ -553,7 +548,7 @@
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden group hover:border-atliRed/40 transition-all flex flex-col justify-between">
                     <div>
                         <div class="relative h-72 overflow-hidden bg-gray-200">
-                            <img src="NSSF%20Certificate.jpg" alt="NSSF Employer Registration Certificate" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <img src="NSSF%20Certificate.jpg" alt="NSSF Employer Registration Certificate" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80';">
                         </div>
                         <div class="p-5">
                             <h3 class="text-lg font-bold text-atliCharcoal mb-0.5">NSSF Employer Registration</h3>
@@ -567,7 +562,7 @@
                 <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden group hover:border-atliRed/40 transition-all flex flex-col justify-between">
                     <div>
                         <div class="relative h-72 overflow-hidden bg-gray-200">
-                            <img src="TIN%20Certificate.jpg" alt="URA TIN Certificate of Registration" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <img src="TIN%20Certificate.jpg" alt="URA TIN Certificate of Registration" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=80';">
                         </div>
                         <div class="p-5">
                             <h3 class="text-lg font-bold text-atliCharcoal mb-0.5">URA TIN Certificate</h3>
