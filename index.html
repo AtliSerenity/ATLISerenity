@@ -43,7 +43,11 @@
       },
       "description": "Provider of indoor & outdoor event management, PA audio systems, tent logistics, and media coverage.",
       "url": "https://atliserenity.github.io/ATLISerenity/",
-      "priceRange": "UGX 20,000 - UGX 1,700,000"
+      "priceRange": "UGX 20,000 - UGX 1,700,000",
+      "sameAs": [
+        "https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z",
+        "https://www.tiktok.com/@atliserenity"
+      ]
     }
     </script>
 
@@ -93,11 +97,26 @@
 </head>
 <body class="bg-gray-50 text-atliCharcoal font-sans antialiased selection:bg-atliRed selection:text-white">
 
-    <!-- Top Contact & Trust Bar -->
+    <!-- Top Contact, Trust & Social Bar -->
     <div class="bg-atliCharcoal text-white text-xs py-2 px-4 border-b border-gray-800">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <span><i class="fas fa-phone-alt text-atliRed mr-1"></i> Helpline: +256 (0)393 003 399 | Indoor & Outdoor Event Execution Uganda</span>
-            <span class="text-atliGold font-semibold"><i class="fas fa-warehouse mr-1"></i> Tororo HQ & Nagongera Local Hubs</span>
+            <span class="flex items-center gap-4 flex-wrap">
+                <span><i class="fas fa-phone-alt text-atliRed mr-1"></i> Helpline: +256 (0)393 003 399</span>
+                <span class="hidden md:inline text-gray-500">|</span>
+                <span class="text-atliGold font-semibold"><i class="fas fa-warehouse mr-1"></i> Tororo HQ & Nagongera Hubs</span>
+            </span>
+            <div class="flex items-center gap-3">
+                <span class="text-gray-400">Connect:</span>
+                <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-atliRed text-white w-6 h-6 rounded-full flex items-center justify-center transition-colors" title="YouTube Channel">
+                    <i class="fab fa-youtube text-[11px]"></i>
+                </a>
+                <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-atliRed text-white w-6 h-6 rounded-full flex items-center justify-center transition-colors" title="TikTok Profile">
+                    <i class="fab fa-tiktok text-[11px]"></i>
+                </a>
+                <a href="https://wa.me/256761480472?text=Hello%20ATLI%20Serenity,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center transition-colors" title="WhatsApp Chat">
+                    <i class="fab fa-whatsapp text-[11px]"></i>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -130,11 +149,11 @@
                     <a href="#contact" class="hover:text-atliRed transition-colors">Contact</a>
                 </nav>
 
-                <!-- Phone CTA Button -->
+                <!-- Phone CTA Button triggering Booking Modal -->
                 <div class="hidden md:flex items-center gap-4">
-                    <a href="tel:+256393003399" class="bg-atliRed hover:bg-atliRed-dark text-white font-bold px-5 py-2.5 rounded-xl shadow-md transition-all flex items-center gap-2 text-sm">
+                    <button onclick="openBookingModal()" class="bg-atliRed hover:bg-atliRed-dark text-white font-bold px-5 py-2.5 rounded-xl shadow-md transition-all flex items-center gap-2 text-sm cursor-pointer">
                         <i class="fas fa-phone-alt animate-bounce"></i> Book Execution
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Mobile Menu Toggle -->
@@ -152,6 +171,13 @@
             <a href="#feedback" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Testimonials</a>
             <a href="#about" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">About Us</a>
             <a href="#contact" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Contact Us</a>
+            <div class="pt-2 flex items-center gap-3 border-t border-gray-100">
+                <span class="text-xs text-gray-500 font-medium">Socials:</span>
+                <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="text-atliRed text-base"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="text-atliCharcoal text-base"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/256761480472" target="_blank" rel="noopener noreferrer" class="text-green-600 text-base"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <button onclick="openBookingModal()" class="w-full mt-2 bg-atliRed text-white font-bold py-2.5 rounded-xl text-sm">Book Execution</button>
         </div>
     </header>
 
@@ -176,9 +202,9 @@
                     <a href="#calculator" class="bg-atliRed hover:bg-atliRed-dark text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-all text-center flex items-center justify-center gap-2">
                         <i class="fas fa-calculator"></i> Calculate Instant Quote
                     </a>
-                    <a href="#services" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2">
-                        View Pricing Catalog <i class="fas fa-arrow-down text-xs"></i>
-                    </a>
+                    <button onclick="openBookingModal()" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fas fa-phone-alt"></i> Contact & Direct Booking
+                    </button>
                 </div>
             </div>
         </div>
@@ -194,7 +220,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Sound Reinforcement (Bass Speaker, Monitor, Line Arrays) -->
+                <!-- Sound Reinforcement -->
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift flex flex-col justify-between">
                     <div>
                         <div class="h-56 overflow-hidden relative bg-black">
@@ -229,7 +255,7 @@
                     </div>
                 </div>
 
-                <!-- Venue & Tents (Outdoor tent with seats, tables, and people) -->
+                <!-- Venue & Tents -->
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift flex flex-col justify-between">
                     <div>
                         <div class="h-56 overflow-hidden relative bg-black">
@@ -260,15 +286,22 @@
                     </div>
                 </div>
 
-                <!-- Media Coverage (Sony FX series & Canon Cinema Cameras) -->
+                <!-- Media Coverage (Featuring Dual Lifelike Cameras: Sony FX6 Cinema Rig & Sony NXCAM Broadcast Camcorder) -->
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift flex flex-col justify-between">
                     <div>
-                        <div class="h-56 overflow-hidden relative bg-black">
-                            <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=800&q=80" alt="Professional Sony FX and Canon cinema video cameras" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="grid grid-cols-2 h-56 bg-black">
+                            <div class="relative overflow-hidden border-r border-gray-800">
+                                <img src="https://d1rzxhvrtciqq1.cloudfront.net/uploads/images/listingimage/1146713/image/big-cc50b341d30712938ab9b9447209c314.jpg" alt="Sony FX6 Cinema Camera on tripod with microphone and wireless transmitter" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                <span class="absolute bottom-2 left-2 bg-black/80 text-white text-[9px] px-2 py-0.5 rounded font-bold">Sony FX6 Rig</span>
+                            </div>
+                            <div class="relative overflow-hidden">
+                                <img src="https://d1mv2b9v99cq0i.cloudfront.net/eyJidWNrZXQiOiJ3ZWItbmluamEtaW1hZ2VzIiwia2V5Ijoia2F5ZWxsYXVzdHJhbGlhXC9pbWFnZXNcLzE4NDkzXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX19LCJ2ZXJzaW9uIjoiODhlNGJhMTE4YTg3ZWExOTRlMWQ3MzA5ODZlMDMyMTlmNmUwMTgwOCJ9" alt="Sony NXCAM Camcorder on tripod with microphone" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                <span class="absolute bottom-2 left-2 bg-black/80 text-white text-[9px] px-2 py-0.5 rounded font-bold">NXCAM Broadcast</span>
+                            </div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-atliCharcoal mb-2">Media Coverage</h3>
-                            <p class="text-gray-500 text-xs mb-4">4K video recording with Sony FX & Canon cameras, photobooks, and aerial drone shots.</p>
+                            <p class="text-gray-500 text-xs mb-4">4K video recording with dual Sony FX6 & NXCAM broadcast cameras, shotgun mics, and wireless transmitters.</p>
                             <ul class="space-y-3 text-xs font-medium text-gray-700">
                                 <li class="flex justify-between items-center border-b pb-2">
                                     <span>Basic Photography</span>
@@ -371,9 +404,9 @@
                             <span class="text-xs uppercase font-bold text-gray-500 block">Total Estimated Package</span>
                             <span id="quote-total" class="text-2xl sm:text-3xl font-black text-atliRed">Ugx. 0/=</span>
                         </div>
-                        <a href="#contact" class="w-full sm:w-auto bg-atliRed hover:bg-atliRed-dark text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all text-center text-sm">
+                        <button onclick="openBookingModal()" class="w-full sm:w-auto bg-atliRed hover:bg-atliRed-dark text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition-all text-center text-sm cursor-pointer">
                             Book This Package
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -459,7 +492,7 @@
         </div>
     </section>
 
-    <!-- 5. ABOUT US, WAREHOUSES & ORIGINAL REGISTRATION DOCUMENTS -->
+    <!-- 5. ABOUT US, WAREHOUSES & REGISTRATION DOCUMENTS -->
     <section id="about" class="py-20 bg-white border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -478,7 +511,7 @@
                 </p>
             </div>
 
-            <!-- Original Registration & Statutory Documents Grid -->
+            <!-- Original Registration & Statutory Document Extracts -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- URSB Document Extract Card -->
                 <div class="bg-atliCharcoal text-white p-8 rounded-3xl shadow-sm flex flex-col justify-between hover-lift">
@@ -540,7 +573,7 @@
         </div>
     </section>
 
-    <!-- 6. CONTACT & BOOKING (Mandatory fields + Optional Email & TIN) -->
+    <!-- 6. CONTACT & BOOKING -->
     <section id="contact" class="py-20 bg-gray-50 border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -554,6 +587,8 @@
                     <input type="hidden" name="_subject" value="New Event Inquiry - ATLI Serenity Website">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
+                    <!-- FormSubmit Auto-CC / Send Copy to Client if checked -->
+                    <input type="hidden" name="_autoresponse" value="Thank you for contacting ATLI Serenity Events & Logistics Ltd. We have received your inquiry and will get back to you shortly with your event execution details.">
                     <input type="text" name="_honey" style="display:none">
 
                     <div>
@@ -572,11 +607,10 @@
                         </div>
                     </div>
 
-                    <!-- Additional Non-Mandatory Slots for Email and TIN -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Email Address <span class="text-gray-400 font-normal">(Optional)</span></label>
-                            <input type="email" name="Email Address" placeholder="e.g. client@example.com" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
+                            <input type="email" id="field-email" name="Email Address" placeholder="e.g. client@example.com" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">TIN - Tax Identification Number <span class="text-gray-400 font-normal">(Optional)</span></label>
@@ -589,12 +623,20 @@
                         <textarea id="field-details" name="Project Details" rows="3" required placeholder="Specify your venue, sound requirements, and tent/media package..." class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed"></textarea>
                     </div>
 
+                    <!-- Functional Checkbox to Send Copy to Client's Email -->
+                    <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-start gap-3">
+                        <input type="checkbox" id="send-copy-checkbox" name="_cc" value="" class="w-4 h-4 text-atliRed rounded focus:ring-atliRed mt-0.5">
+                        <label for="send-copy-checkbox" class="text-xs font-medium text-gray-700 cursor-pointer">
+                            <strong>Send a copy of this inquiry / booking summary to my provided email</strong> (Requires email address above).
+                        </label>
+                    </div>
+
                     <!-- Validation Reminder Banner -->
                     <div id="form-error-msg" class="hidden bg-red-50 border border-red-200 text-atliRed text-xs font-semibold p-3 rounded-xl flex items-center gap-2">
                         <i class="fas fa-exclamation-circle text-base"></i> Please fill in all mandatory fields before submitting your inquiry.
                     </div>
 
-                    <button type="submit" class="w-full bg-atliRed hover:bg-atliRed-dark text-white font-bold py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center justify-center gap-2">
+                    <button type="submit" class="w-full bg-atliRed hover:bg-atliRed-dark text-white font-bold py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center justify-center gap-2 cursor-pointer">
                         <i class="fas fa-paper-plane"></i> Submit Inquiry to Email
                     </button>
                 </form>
@@ -618,17 +660,104 @@
                     <p class="text-[10px]">Tororo & Nagongera Warehouses. URSB Reg: 80034063692986 | NSSF: NS043016</p>
                 </div>
             </div>
+            
+            <!-- Social Handles in Footer -->
+            <div class="flex items-center gap-4">
+                <span class="text-gray-400 font-semibold">Follow Us:</span>
+                <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-gray-900 hover:bg-atliRed text-white rounded-lg flex items-center justify-center transition-colors" title="YouTube">
+                    <i class="fab fa-youtube text-sm"></i>
+                </a>
+                <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-gray-900 hover:bg-atliRed text-white rounded-lg flex items-center justify-center transition-colors" title="TikTok">
+                    <i class="fab fa-tiktok text-sm"></i>
+                </a>
+                <a href="https://wa.me/256761480472" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-gray-900 hover:bg-green-600 text-white rounded-lg flex items-center justify-center transition-colors" title="WhatsApp">
+                    <i class="fab fa-whatsapp text-sm"></i>
+                </a>
+            </div>
+
             <div class="text-center md:text-right">
                 <p>&copy; 2026 ATLI Serenity Events and Logistics Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript Navigation & Calculator Logic -->
+    <!-- Booking Modal Popup Component -->
+    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden px-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl relative border border-gray-100 animate-in fade-in zoom-in duration-200">
+            <button onclick="closeBookingModal()" aria-label="Close modal" class="absolute top-5 right-5 text-gray-400 hover:text-atliCharcoal text-xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-red-50 text-atliRed rounded-2xl flex items-center justify-center mx-auto mb-3 text-lg">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="text-2xl font-black text-atliCharcoal">Book ATLI Serenity Execution</h3>
+                <p class="text-gray-500 text-xs mt-1">Choose your preferred channel to connect with our operations team instantly.</p>
+            </div>
+
+            <div class="space-y-3">
+                <a href="tel:+256393003399" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-atliRed rounded-2xl transition-all group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-atliRed text-white rounded-xl flex items-center justify-center text-sm shadow-sm">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-atliCharcoal group-hover:text-atliRed">Call Helpline</span>
+                            <span class="text-[11px] text-gray-500">+256 (0)393 003 399</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                </a>
+
+                <a href="mailto:atliserenityeventsandlogistics@gmail.com?subject=Inquiry%20-%20ATLI%20Serenity%20Events" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-atliRed rounded-2xl transition-all group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-atliCharcoal text-white rounded-xl flex items-center justify-center text-sm shadow-sm">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-atliCharcoal group-hover:text-atliRed">Send Email</span>
+                            <span class="text-[11px] text-gray-500">atliserenityeventsandlogistics@gmail.com</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                </a>
+
+                <a href="https://wa.me/256761480472?text=Hello%20ATLI%20Serenity,%20I%20would%20like%20to%20book%20an%20event%20execution%20package." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-600 rounded-2xl transition-all group">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-green-600 text-white rounded-xl flex items-center justify-center text-sm shadow-sm">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-atliCharcoal group-hover:text-green-700">Chat on WhatsApp</span>
+                            <span class="text-[11px] text-gray-500">+256 761 480 472</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                </a>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-gray-100 text-center">
+                <a href="#contact" onclick="closeBookingModal()" class="text-xs font-bold text-atliRed hover:underline">Or fill out our online inquiry form below &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Navigation, Calculator & Modal Logic -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // Modal Controls
+        function openBookingModal() {
+            document.getElementById('booking-modal').classList.remove('hidden');
+        }
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+        }
+        document.getElementById('booking-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeBookingModal();
+        });
 
         // Quote Calculator Logic
         const audioSelect = document.getElementById('audio-select');
@@ -644,6 +773,30 @@
         addonCheckboxes.forEach(cb => cb.addEventListener('change', calculateQuote));
         calculateQuote();
 
+        // Sync Checkbox with FormSubmit _cc field dynamically
+        const sendCopyCheckbox = document.getElementById('send-copy-checkbox');
+        const emailInput = document.getElementById('field-email');
+
+        sendCopyCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                if (!emailInput.value.trim()) {
+                    alert('Please enter your email address above before selecting to receive a copy.');
+                    this.checked = false;
+                    emailInput.focus();
+                } else {
+                    this.value = emailInput.value.trim();
+                }
+            } else {
+                this.value = '';
+            }
+        });
+
+        emailInput.addEventListener('input', function() {
+            if (sendCopyCheckbox.checked) {
+                sendCopyCheckbox.value = this.value.trim();
+            }
+        });
+
         // Strict Form Incompleteness Restriction & Reminders
         const inquiryForm = document.getElementById('inquiry-form');
         const errorMsg = document.getElementById('form-error-msg');
@@ -656,7 +809,7 @@
 
             if (!name || !phone || !date || !details) {
                 e.preventDefault(); // Restrict submission
-                errorMsg.classList.et('hidden');
+                errorMsg.classList.remove('hidden');
                 errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } else {
                 errorMsg.classList.add('hidden');
