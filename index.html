@@ -8,7 +8,7 @@
     
     <title>ATLI Serenity Events & Logistics Ltd | Audiovisual, PA Systems & Media Coverage Uganda</title>
     <meta name="title" content="ATLI Serenity Events & Logistics Ltd | Audiovisual, PA Systems & Media Coverage Uganda">
-    <meta name="description" content="Uganda's premier provider of indoor & outdoor events logistics. Professional public address sound systems, turntables, tent rentals, plastic chairs, and 4K media coverage with drone aerials. Dual hubs in Tororo & Nagongera.">
+    <meta name="description" content="Uganda's premier provider of indoor & outdoor events logistics. Professional public address sound systems, turntables, tent rentals, plastic chairs, and high quality media coverage. HQ: Market Street, Water village, Tororo town (near Sofitel Hotel).">
     <meta name="keywords" content="ATLI Serenity, Events Logistics Uganda, Sound System Hire Tororo, PA System Nagongera, Event Tents Rental Uganda, Photography Videography Eastern Uganda, Corporate Event Management, Outdoor Concert Sound">
     <meta name="author" content="ATLI Serenity Events & Logistics Ltd">
     <meta name="robots" content="index, follow">
@@ -37,9 +37,11 @@
       "email": "atliserenityeventsandlogistics@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Tororo",
+        "streetAddress": "Market Street, Water village",
+        "addressLocality": "Tororo town",
         "addressRegion": "Eastern Region",
-        "addressCountry": "UG"
+        "addressCountry": "UG",
+        "description": "Near Sofitel Hotel"
       },
       "description": "Provider of indoor & outdoor event management, PA audio systems, tent logistics, and media coverage.",
       "url": "https://atliserenity.github.io/ATLISerenity/",
@@ -97,13 +99,13 @@
 </head>
 <body class="bg-gray-50 text-atliCharcoal font-sans antialiased selection:bg-atliRed selection:text-white">
 
-    <!-- Top Contact, Trust & Social Bar -->
+    <!-- Top Contact, Trust & Location Bar -->
     <div class="bg-atliCharcoal text-white text-xs py-2 px-4 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <span class="flex items-center gap-4 flex-wrap">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <span class="flex items-center gap-3 flex-wrap text-center md:text-left">
                 <span><i class="fas fa-phone-alt text-atliRed mr-1"></i> Helpline: +256 (0)393 003 399</span>
-                <span class="hidden md:inline text-gray-500">|</span>
-                <span class="text-atliGold font-semibold"><i class="fas fa-warehouse mr-1"></i> Tororo HQ & Nagongera Hubs</span>
+                <span class="hidden lg:inline text-gray-500">|</span>
+                <span class="text-atliGold font-semibold"><i class="fas fa-map-marker-alt mr-1"></i> HQ: Market St, Water Village, Tororo (Near Sofitel Hotel)</span>
             </span>
             <div class="flex items-center gap-3">
                 <span class="text-gray-400">Connect:</span>
@@ -124,8 +126,8 @@
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Brand Logo -->
-                <a href="#" class="flex items-center gap-3 group" title="ATLI Serenity Events Home">
+                <!-- Brand Logo (Clicking returns to top dashboard / hero view) -->
+                <a href="#" onclick="returnToDashboard(event)" class="flex items-center gap-3 group cursor-pointer" title="Return to Main Dashboard">
                     <div class="relative w-12 h-12 flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-md group-hover:scale-110 transition-transform duration-300 overflow-hidden p-1">
                         <svg class="w-full h-full animate-float" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ATLI Serenity Logo">
                             <path d="M100 15L175 165H145L125 125H75L55 165H25L100 15Z" fill="#D3111C"/>
@@ -165,24 +167,24 @@
 
         <!-- Mobile Drawer Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
-            <a href="#services" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Services & Pricing</a>
-            <a href="#calculator" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Quote Estimator</a>
-            <a href="#leadership" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Leadership</a>
-            <a href="#feedback" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Testimonials</a>
-            <a href="#about" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">About Us</a>
-            <a href="#contact" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Contact Us</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Services & Pricing</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Quote Estimator</a>
+            <a href="#leadership" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Leadership</a>
+            <a href="#feedback" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Testimonials</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">About Us</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 font-semibold text-gray-700 hover:text-atliRed">Contact Us</a>
             <div class="pt-2 flex items-center gap-3 border-t border-gray-100">
                 <span class="text-xs text-gray-500 font-medium">Socials:</span>
                 <a href="https://youtube.com/@atliserenity?si=boDHcIM2v1Io3j5Z" target="_blank" rel="noopener noreferrer" class="text-atliRed text-base"><i class="fab fa-youtube"></i></a>
                 <a href="https://www.tiktok.com/@atliserenity" target="_blank" rel="noopener noreferrer" class="text-atliCharcoal text-base"><i class="fab fa-tiktok"></i></a>
                 <a href="https://wa.me/256761480472" target="_blank" rel="noopener noreferrer" class="text-green-600 text-base"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <button onclick="openBookingModal()" class="w-full mt-2 bg-atliRed text-white font-bold py-2.5 rounded-xl text-sm">Book Execution</button>
+            <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full mt-2 bg-atliRed text-white font-bold py-2.5 rounded-xl text-sm">Book Execution</button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-atliCharcoal text-white overflow-hidden py-24 lg:py-32">
+    <section id="hero-dashboard" class="relative bg-atliCharcoal text-white overflow-hidden py-24 lg:py-32">
         <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D3111C_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-atliCharcoal via-atliCharcoal/90 to-transparent z-10"></div>
         <div class="absolute inset-0 bg-cover bg-center opacity-35 scale-105" style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1920&q=80');"></div>
@@ -196,7 +198,7 @@
                     Crafting your Indoor & Outdoor Events with <span class="text-atliRed">Peace of Mind</span>
                 </h1>
                 <p class="text-base sm:text-lg text-gray-300 mb-8 font-light leading-relaxed">
-                    Delivering acoustic clarity, high-capacity tent setups, professional turntables, and 4K aerial video production dispatched locally from our Tororo & Nagongera warehouses.
+                    Delivering acoustic clarity, high-capacity tent setups, professional turntables, and high quality media production dispatched locally from our Tororo & Nagongera warehouses.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#calculator" class="bg-atliRed hover:bg-atliRed-dark text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-all text-center flex items-center justify-center gap-2">
@@ -286,22 +288,16 @@
                     </div>
                 </div>
 
-                <!-- Media Coverage (Featuring Dual Lifelike Cameras: Sony FX6 Cinema Rig & Sony NXCAM Broadcast Camcorder) -->
+                <!-- Media Coverage (Single Captivating Video Camcorder Image) -->
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift flex flex-col justify-between">
                     <div>
-                        <div class="grid grid-cols-2 h-56 bg-black">
-                            <div class="relative overflow-hidden border-r border-gray-800">
-                                <img src="https://d1rzxhvrtciqq1.cloudfront.net/uploads/images/listingimage/1146713/image/big-cc50b341d30712938ab9b9447209c314.jpg" alt="Sony FX6 Cinema Camera on tripod with microphone and wireless transmitter" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                                <span class="absolute bottom-2 left-2 bg-black/80 text-white text-[9px] px-2 py-0.5 rounded font-bold">Sony FX6 Rig</span>
-                            </div>
-                            <div class="relative overflow-hidden">
-                                <img src="https://d1mv2b9v99cq0i.cloudfront.net/eyJidWNrZXQiOiJ3ZWItbmluamEtaW1hZ2VzIiwia2V5Ijoia2F5ZWxsYXVzdHJhbGlhXC9pbWFnZXNcLzE4NDkzXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX19LCJ2ZXJzaW9uIjoiODhlNGJhMTE4YTg3ZWExOTRlMWQ3MzA5ODZlMDMyMTlmNmUwMTgwOCJ9" alt="Sony NXCAM Camcorder on tripod with microphone" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                                <span class="absolute bottom-2 left-2 bg-black/80 text-white text-[9px] px-2 py-0.5 rounded font-bold">NXCAM Broadcast</span>
-                            </div>
+                        <div class="h-56 overflow-hidden relative bg-black">
+                            <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=800&q=80" alt="Professional broadcast video camcorder on tripod with microphone" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <span class="absolute bottom-3 left-3 bg-black/80 text-white text-[10px] px-2.5 py-1 rounded-lg font-bold">High Quality Video Rig</span>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-atliCharcoal mb-2">Media Coverage</h3>
-                            <p class="text-gray-500 text-xs mb-4">4K video recording with dual Sony FX6 & NXCAM broadcast cameras, shotgun mics, and wireless transmitters.</p>
+                            <p class="text-gray-500 text-xs mb-4">High quality video recording with professional camcorders, directional microphones, photobooks, and aerial drone shots.</p>
                             <ul class="space-y-3 text-xs font-medium text-gray-700">
                                 <li class="flex justify-between items-center border-b pb-2">
                                     <span>Basic Photography</span>
@@ -506,8 +502,11 @@
                 <h3 class="text-xl font-bold text-atliCharcoal mb-3 flex items-center gap-2">
                     <i class="fas fa-warehouse text-atliRed"></i> Dual Warehouses (Tororo & Nagongera)
                 </h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
                     All warehouses store all similar equipment; they are just meant for clients to extend services nearer to the clients depending on where the events are being hosted (indoor halls or outdoor grounds).
+                </p>
+                <p class="text-xs text-atliCharcoal font-semibold">
+                    <i class="fas fa-map-pin text-atliRed mr-1"></i> Corporate Office & Primary Logistics Center: Market Street, Water Village, Tororo Town (Near Sofitel Hotel).
                 </p>
             </div>
 
@@ -657,7 +656,7 @@
                 </div>
                 <div>
                     <span class="text-white font-bold">ATLI SERENITY EVENTS AND LOGISTICS LTD</span>
-                    <p class="text-[10px]">Tororo & Nagongera Warehouses. URSB Reg: 80034063692986 | NSSF: NS043016</p>
+                    <p class="text-[10px]">Market St, Water Village, Tororo Town (Near Sofitel Hotel). URSB Reg: 80034063692986 | NSSF: NS043016</p>
                 </div>
             </div>
             
@@ -742,11 +741,29 @@
         </div>
     </div>
 
-    <!-- JavaScript Navigation, Calculator & Modal Logic -->
+    <!-- JavaScript Navigation, Dashboard Reset & Modal Logic -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+        menuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Return to Main Dashboard (Hero section) when clicking company logo
+        function returnToDashboard(e) {
+            e.preventDefault();
+            const hero = document.getElementById('hero-dashboard');
+            if (hero) {
+                hero.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
 
         // Modal Controls
         function openBookingModal() {
