@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Primary Meta Tags -->
+    <!-- Primary Meta & Cybersecurity Headers -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:;">
+    
     <title>ATLI Serenity Events & Logistics Ltd | Audiovisual, PA Systems & Media Coverage Uganda</title>
     <meta name="title" content="ATLI Serenity Events & Logistics Ltd | Audiovisual, PA Systems & Media Coverage Uganda">
     <meta name="description" content="Uganda's premier provider of indoor & outdoor events logistics. Professional public address sound systems, turntables, tent rentals, plastic chairs, and 4K media coverage with drone aerials. Dual hubs in Tororo & Nagongera.">
@@ -12,26 +15,19 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.atliserenity.com/">
 
-    <!-- Open Graph / Facebook / WhatsApp Sharing -->
+    <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.atliserenity.com/">
     <meta property="og:title" content="ATLI Serenity Events & Logistics Ltd | Crafting Events with Peace of Mind">
     <meta property="og:description" content="Top-tier indoor & outdoor event sound reinforcement, tent logistics, and media coverage across Uganda. Instant online quote calculator available.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80">
 
-    <!-- Twitter Meta Tags -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.atliserenity.com/">
-    <meta property="twitter:title" content="ATLI Serenity Events & Logistics Ltd">
-    <meta property="twitter:description" content="Professional indoor & outdoor public address systems, tents, and video/photography coverage in Uganda.">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80">
-
-    <!-- Tailwind CSS & Icons -->
+    <!-- Tailwind CSS & FontAwesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Schema.org Structured Data for Local SEO -->
+    <!-- Schema.org Local Business Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -504,7 +500,7 @@
         </div>
     </section>
 
-    <!-- 6. CONTACT & BOOKING (Integrated Direct-to-Email Form) -->
+    <!-- 6. CONTACT & BOOKING (Secure FormSubmit Integration) -->
     <section id="contact" class="py-20 bg-gray-50 border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -514,12 +510,12 @@
             </div>
 
             <div class="bg-white border border-gray-200 rounded-3xl p-8 shadow-lg">
-                <!-- FormSubmit Integration: Sends inquiries directly to atliserenityeventsandlogistics@gmail.com -->
                 <form action="https://formsubmit.co/atliserenityeventsandlogistics@gmail.com" method="POST" class="space-y-4">
-                    <!-- FormSubmit Configuration Hidden Inputs -->
+                    <!-- Security & Configuration Hidden Inputs -->
                     <input type="hidden" name="_subject" value="New Event Inquiry - ATLI Serenity Website">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none"> <!-- Anti-spam bot trap -->
 
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Your Full Name</label>
@@ -569,7 +565,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript Navigation and Calculator -->
+    <!-- JavaScript Navigation & Calculator Logic -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
