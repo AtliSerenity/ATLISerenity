@@ -39,7 +39,7 @@
       "name": "ATLI Serenity Events & Logistics Ltd",
       "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
       "telephone": "+256393003399",
-      "email": "info@atliserenity.com",
+      "email": "atliserenityeventsandlogistics@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tororo",
@@ -125,7 +125,7 @@
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Navigation -->
+                <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
                     <a href="#services" class="hover:text-atliRed transition-colors">Services & Pricing</a>
                     <a href="#calculator" class="hover:text-atliRed transition-colors">Quote Estimator</a>
@@ -504,37 +504,43 @@
         </div>
     </section>
 
-    <!-- 6. CONTACT & BOOKING -->
+    <!-- 6. CONTACT & BOOKING (Integrated Direct-to-Email Form) -->
     <section id="contact" class="py-20 bg-gray-50 border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-atliRed font-bold text-xs uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">Get in Touch</span>
                 <h2 class="text-3xl sm:text-4xl font-black text-atliCharcoal mt-3">Let's Craft Your Next Indoor or Outdoor Event</h2>
-                <p class="text-gray-600 mt-2">Call +256 (0)393 003 399 or send an inquiry below.</p>
+                <p class="text-gray-600 mt-2">Call +256 (0)393 003 399 or send an inquiry directly to our inbox below.</p>
             </div>
 
             <div class="bg-white border border-gray-200 rounded-3xl p-8 shadow-lg">
-                <form onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been received by ATLI Serenity.');" class="space-y-4">
+                <!-- FormSubmit Integration: Sends inquiries directly to atliserenityeventsandlogistics@gmail.com -->
+                <form action="https://formsubmit.co/atliserenityeventsandlogistics@gmail.com" method="POST" class="space-y-4">
+                    <!-- FormSubmit Configuration Hidden Inputs -->
+                    <input type="hidden" name="_subject" value="New Event Inquiry - ATLI Serenity Website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Your Full Name</label>
-                        <input type="text" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
+                        <input type="text" name="Full Name" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Phone Number</label>
-                            <input type="tel" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
+                            <input type="tel" name="Phone Number" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Event Date</label>
-                            <input type="date" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
+                            <input type="date" name="Event Date" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed">
                         </div>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Project Details & Services Needed (Indoor / Outdoor)</label>
-                        <textarea rows="3" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed"></textarea>
+                        <textarea name="Project Details" rows="3" required class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-atliRed"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-atliRed hover:bg-atliRed-dark text-white font-bold py-3.5 rounded-xl shadow-lg transition-all text-sm">
-                        Submit Inquiry
+                    <button type="submit" class="w-full bg-atliRed hover:bg-atliRed-dark text-white font-bold py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i> Submit Inquiry to Email
                     </button>
                 </form>
             </div>
