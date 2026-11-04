@@ -70,17 +70,12 @@
                         atliGold: '#D4AF37',
                     },
                     keyframes: {
-                        pulseStar: {
-                            '0%, 100%': { transform: 'scale(1)', opacity: '1' },
-                            '50%': { transform: 'scale(1.15)', opacity: '0.85' },
-                        },
                         floatSlow: {
                             '0%, 100%': { transform: 'translateY(0)' },
                             '50%': { transform: 'translateY(-5px)' },
                         }
                     },
                     animation: {
-                        'pulse-star': 'pulseStar 3s ease-in-out infinite',
                         'float': 'floatSlow 4s ease-in-out infinite',
                     }
                 }
@@ -128,14 +123,10 @@
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Brand Logo (Clicking returns to top dashboard / hero view) -->
+                <!-- Brand Logo (Animated Official Logo) -->
                 <a href="#" onclick="returnToDashboard(event)" class="flex items-center gap-3 group cursor-pointer" title="Return to Main Dashboard">
-                    <div class="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden p-1">
-                        <svg class="w-full h-full animate-float" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ATLI Serenity Logo">
-                            <path d="M100 15L175 165H145L125 125H75L55 165H25L100 15Z" fill="#D3111C"/>
-                            <path d="M100 55L120 95H80L100 55Z" fill="white"/>
-                            <path class="animate-pulse-star origin-center" d="M100 70L112 95L137 107L112 119L100 144L88 119L63 107L88 95L100 70Z" fill="#D3111C"/>
-                        </svg>
+                    <div class="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-md group-hover:scale-105 transition-transform duration-300 overflow-hidden p-0.5">
+                        <img src="ATLI%20SERENITY%20LOGO.jpeg" alt="ATLI Serenity Logo" class="w-full h-full object-contain animate-float">
                     </div>
                     <div>
                         <span class="text-lg sm:text-2xl font-black tracking-tight text-atliCharcoal">ATLI <span class="text-atliRed">SERENITY</span></span>
@@ -534,13 +525,13 @@
                 </p>
             </div>
 
-            <!-- Registration Certificates Grid (Configured identically to leadership portraits for GitHub upload) -->
+            <!-- Registration Certificates Grid (Coded similarly to Executive Leadership portraits) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- URSB Certificate PNG -->
+                <!-- URSB Certificate -->
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group flex flex-col justify-between">
                     <div>
                         <div class="relative h-80 overflow-hidden bg-gray-200">
-                            <img src="URSB%20Certificate.png" alt="URSB Certificate of Incorporation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <img src="URSB%20Certificate.jpg" alt="URSB Certificate of Incorporation" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-atliCharcoal mb-1">URSB Certificate of Incorporation</h3>
@@ -550,11 +541,11 @@
                     </div>
                 </div>
 
-                <!-- NSSF Certificate PNG -->
+                <!-- NSSF Certificate -->
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group flex flex-col justify-between">
                     <div>
                         <div class="relative h-80 overflow-hidden bg-gray-200">
-                            <img src="NSSF%20Certificate.png" alt="NSSF Employer Registration Certificate" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <img src="NSSF%20Certificate.jpg" alt="NSSF Employer Registration Certificate" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-atliCharcoal mb-1">NSSF Employer Registration</h3>
@@ -564,11 +555,11 @@
                     </div>
                 </div>
 
-                <!-- URA TIN Certificate PNG -->
+                <!-- URA TIN Certificate -->
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group flex flex-col justify-between">
                     <div>
                         <div class="relative h-80 overflow-hidden bg-gray-200">
-                            <img src="TIN%20Certificate.png" alt="URA TIN Certificate of Registration" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <img src="TIN%20Certificate.jpg" alt="URA TIN Certificate of Registration" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-atliCharcoal mb-1">URA TIN Certificate</h3>
@@ -656,12 +647,8 @@
     <footer class="bg-black text-gray-400 py-12 border-t border-gray-900 text-xs">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
             <div class="flex flex-col sm:flex-row items-center gap-3">
-                <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center p-1 border border-gray-800 shrink-0">
-                    <svg class="w-full h-full animate-float" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M100 15L175 165H145L125 125H75L55 165H25L100 15Z" fill="#D3111C"/>
-                        <path d="M100 55L120 95H80L100 55Z" fill="white"/>
-                        <path class="animate-pulse-star origin-center" d="M100 70L112 95L137 107L112 119L100 144L88 119L63 107L88 95L100 70Z" fill="#D3111C"/>
-                    </svg>
+                <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center p-0.5 border border-gray-800 shrink-0 overflow-hidden">
+                    <img src="ATLI%20SERENITY%20LOGO.jpeg" alt="ATLI Serenity Logo" class="w-full h-full object-contain animate-float">
                 </div>
                 <div>
                     <span class="text-white font-bold block">ATLI SERENITY EVENTS AND LOGISTICS LTD</span>
