@@ -476,11 +476,11 @@
 
             <!-- Dynamic Media Grid with Uploaded Field Photos & Auto-Advancing Video Player -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
-                <!-- Highlight 1: Video Playlist (Replaces previous static _DSC0764.jpg) -->
+                <!-- Highlight 1: Video Playlist (dj booth.mp4 & dj rack.mp4) -->
                 <div class="gallery-item sound bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
                     <div class="relative h-64 overflow-hidden bg-black flex items-center justify-center">
                         <video id="audio-video-player" controls playsinline class="w-full h-full object-cover">
-                            <source id="video-source" src="video_1.mp4" type="video/mp4">
+                            <source id="video-source" src="dj%20booth.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <span class="absolute top-4 right-4 bg-atliRed text-white text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-sm shadow-md">
@@ -908,8 +908,8 @@
             if (e.target === this) closeBookingModal();
         });
 
-        // Video Auto-advance / Playlist logic
-        const videoPlaylist = ["video_1.mp4", "video_2.mp4"];
+        // Video Auto-advance / Playlist logic (using exact filenames: dj booth.mp4 & dj rack.mp4)
+        const videoPlaylist = ["dj%20booth.mp4", "dj%20rack.mp4"];
         let currentVideoIndex = 0;
         const videoPlayer = document.getElementById('audio-video-player');
         const videoSource = document.getElementById('video-source');
