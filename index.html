@@ -223,7 +223,7 @@
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift flex flex-col justify-between">
                     <div>
                         <div class="h-56 overflow-hidden relative bg-black">
-                            <img src="_DSC8455.jpg" alt="Live sound system deployment and audio racks" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <img src="_DSC8455.jpg" alt="Live sound system deployment" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-atliCharcoal mb-2">Sound Reinforcement</h3>
@@ -258,7 +258,7 @@
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift flex flex-col justify-between">
                     <div>
                         <div class="h-56 overflow-hidden relative bg-black">
-                            <img src="_DSC0765.jpg" alt="Outdoor setup with high-peak tents and seating" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <img src="Tents%20and%20Chairs.jpg" alt="Tents and chairs setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-atliCharcoal mb-2">Venue & Tents</h3>
@@ -289,7 +289,7 @@
                 <div class="bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift flex flex-col justify-between">
                     <div>
                         <div class="h-56 overflow-hidden relative bg-black">
-                            <img src="DSC_0529.jpg" alt="Event photography and coverage" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <img src="Wedding%20scene.jpg" alt="Wedding scene media coverage" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-atliCharcoal mb-2">Media Coverage</h3>
@@ -476,10 +476,10 @@
 
             <!-- Dynamic Media Grid with Uploaded Field Photos & Auto-Advancing Video Player -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
-                <!-- Highlight 1: Video Playlist (dj booth.mp4 & dj rack.mp4) -->
+                <!-- Highlight 1: Video Playlist (Autoplay enabled) -->
                 <div class="gallery-item sound bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
                     <div class="relative h-64 overflow-hidden bg-black flex items-center justify-center">
-                        <video id="audio-video-player" controls playsinline class="w-full h-full object-cover">
+                        <video id="audio-video-player" autoplay muted loop playsinline class="w-full h-full object-cover">
                             <source id="video-source" src="dj%20booth.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -497,10 +497,10 @@
                     </div>
                 </div>
 
-                <!-- Highlight 2: _DSC0765.jpg -->
+                <!-- Highlight 2: Tents and Chairs.jpg -->
                 <div class="gallery-item tents bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
                     <div class="relative h-64 overflow-hidden bg-gray-900">
-                        <img src="_DSC0765.jpg" alt="High-peak tents with ceremonial seating" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="Tents%20and%20Chairs.jpg" alt="High-peak tents with ceremonial seating" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <span class="absolute top-4 right-4 bg-atliCharcoal/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-sm">Tents & Canopies</span>
                     </div>
                     <div class="p-5">
@@ -576,17 +576,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Upload Guidelines Banner for Company Admin / Daily Updates -->
-            <div class="mt-12 bg-white border border-dashed border-gray-300 rounded-3xl p-6 text-center">
-                <div class="w-10 h-10 bg-red-50 text-atliRed rounded-xl flex items-center justify-center mx-auto mb-2 text-sm">
-                    <i class="fas fa-camera"></i>
-                </div>
-                <h4 class="text-sm font-bold text-atliCharcoal">Daily Photo & Video Highlights Upload Instructions</h4>
-                <p class="text-gray-500 text-xs mt-1 max-w-xl mx-auto">
-                    To add new event highlights to this gallery daily, save your photos and MP4 videos into your GitHub repository and update the media file paths in <code class="bg-gray-100 px-2 py-0.5 rounded text-atliRed font-mono">index.html</code>.
-                </p>
             </div>
         </div>
     </section>
