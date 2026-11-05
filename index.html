@@ -468,25 +468,31 @@
                 <!-- Filter Tabs -->
                 <div class="flex flex-wrap gap-2" id="gallery-filters">
                     <button onclick="filterGallery('all')" class="gallery-filter-btn active bg-atliRed text-white text-xs font-bold px-4 py-2 rounded-xl transition-all cursor-pointer">All Highlights</button>
+                    <button onclick="filterGallery('sound')" class="gallery-filter-btn bg-white border border-gray-200 text-gray-700 text-xs font-bold px-4 py-2 rounded-xl hover:border-atliRed transition-all cursor-pointer">Sound & Audio</button>
                     <button onclick="filterGallery('tents')" class="gallery-filter-btn bg-white border border-gray-200 text-gray-700 text-xs font-bold px-4 py-2 rounded-xl hover:border-atliRed transition-all cursor-pointer">Tents & Logistics</button>
                     <button onclick="filterGallery('events')" class="gallery-filter-btn bg-white border border-gray-200 text-gray-700 text-xs font-bold px-4 py-2 rounded-xl hover:border-atliRed transition-all cursor-pointer">Ceremonies & Media</button>
                 </div>
             </div>
 
-            <!-- Dynamic Media Grid with Uploaded Field Photos -->
+            <!-- Dynamic Media Grid with Uploaded Field Photos & Auto-Advancing Video Player -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
-                <!-- Highlight 1: _DSC0764.jpg -->
-                <div class="gallery-item tents bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
-                    <div class="relative h-64 overflow-hidden bg-gray-900">
-                        <img src="_DSC0764.jpg" alt="Event setup and logistics in progress" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <span class="absolute top-4 right-4 bg-atliCharcoal/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-sm">Logistics Setup</span>
+                <!-- Highlight 1: Video Playlist (Replaces previous static _DSC0764.jpg) -->
+                <div class="gallery-item sound bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
+                    <div class="relative h-64 overflow-hidden bg-black flex items-center justify-center">
+                        <video id="audio-video-player" controls playsinline class="w-full h-full object-cover">
+                            <source id="video-source" src="video_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <span class="absolute top-4 right-4 bg-atliRed text-white text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-sm shadow-md">
+                            <i class="fas fa-play mr-1"></i> Live Audio Demo
+                        </span>
                     </div>
                     <div class="p-5">
-                        <h3 class="text-base font-bold text-atliCharcoal">Ground Tent & Seating Deployment</h3>
-                        <p class="text-gray-500 text-xs mt-1">Professional tent rigging and orderly seating arrangement on-site.</p>
+                        <h3 class="text-base font-bold text-atliCharcoal">Audio Sound Reinforcement</h3>
+                        <p class="text-gray-500 text-xs mt-1">Audio sounds from state of the art original audio equipment with deep bass and clear crisp loud sounds ideal for both music and speeches.</p>
                         <div class="mt-4 flex justify-between items-center text-[11px] text-gray-400 font-medium pt-3 border-t border-gray-100">
-                            <span><i class="far fa-calendar-alt text-atliRed mr-1"></i> Field Operations</span>
-                            <span class="text-atliRed font-bold">ATLI Logistics Crew</span>
+                            <span><i class="far fa-play-circle text-atliRed mr-1"></i> Video Playlist</span>
+                            <span id="video-indicator" class="text-atliRed font-bold">Video 1 of 2</span>
                         </div>
                     </div>
                 </div>
@@ -577,9 +583,9 @@
                 <div class="w-10 h-10 bg-red-50 text-atliRed rounded-xl flex items-center justify-center mx-auto mb-2 text-sm">
                     <i class="fas fa-camera"></i>
                 </div>
-                <h4 class="text-sm font-bold text-atliCharcoal">Daily Photo Highlights & Upload Instructions</h4>
+                <h4 class="text-sm font-bold text-atliCharcoal">Daily Photo & Video Highlights Upload Instructions</h4>
                 <p class="text-gray-500 text-xs mt-1 max-w-xl mx-auto">
-                    To add new event highlights to this gallery daily, save your photos into your GitHub repository and update the image filenames in <code class="bg-gray-100 px-2 py-0.5 rounded text-atliRed font-mono">index.html</code>.
+                    To add new event highlights to this gallery daily, save your photos and MP4 videos into your GitHub repository and update the media file paths in <code class="bg-gray-100 px-2 py-0.5 rounded text-atliRed font-mono">index.html</code>.
                 </p>
             </div>
         </div>
@@ -867,7 +873,7 @@
         </div>
     </div>
 
-    <!-- JavaScript Navigation, Gallery Filtering, Dashboard Reset & Modal Logic -->
+    <!-- JavaScript Navigation, Gallery Filtering, Dashboard Reset, Modal Logic & Video Auto-scroll -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -901,6 +907,25 @@
         document.getElementById('booking-modal').addEventListener('click', function(e) {
             if (e.target === this) closeBookingModal();
         });
+
+        // Video Auto-advance / Playlist logic
+        const videoPlaylist = ["video_1.mp4", "video_2.mp4"];
+        let currentVideoIndex = 0;
+        const videoPlayer = document.getElementById('audio-video-player');
+        const videoSource = document.getElementById('video-source');
+        const videoIndicator = document.getElementById('video-indicator');
+
+        if (videoPlayer) {
+            videoPlayer.addEventListener('ended', function() {
+                currentVideoIndex = (currentVideoIndex + 1) % videoPlaylist.length;
+                videoSource.src = videoPlaylist[currentVideoIndex];
+                videoPlayer.load();
+                videoPlayer.play();
+                if (videoIndicator) {
+                    videoIndicator.textContent = `Video ${currentVideoIndex + 1} of ${videoPlaylist.length}`;
+                }
+            });
+        }
 
         // Quote Calculator Logic
         const audioSelect = document.getElementById('audio-select');
