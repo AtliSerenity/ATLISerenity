@@ -476,10 +476,10 @@
 
             <!-- Dynamic Media Grid with Uploaded Field Photos & Auto-Advancing Video Player -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
-                <!-- Highlight 1: Video Playlist -->
+                <!-- Highlight 1: Video Playlist (Unmuted on scroll into view) -->
                 <div class="gallery-item sound bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
                     <div class="relative h-64 overflow-hidden bg-black flex items-center justify-center">
-                        <video id="audio-video-player" autoplay muted loop playsinline class="w-full h-full object-cover">
+                        <video id="audio-video-player" autoplay loop playsinline class="w-full h-full object-cover">
                             <source id="video-source" src="dj%20booth.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -497,7 +497,7 @@
                     </div>
                 </div>
 
-                <!-- Highlight 2: Tents and Chairs.png -->
+                <!-- Highlight 2 -->
                 <div class="gallery-item tents bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
                     <div class="relative h-64 overflow-hidden bg-gray-900">
                         <img src="Tents%20and%20Chairs.png" alt="High-peak tents with ceremonial seating" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -513,7 +513,7 @@
                     </div>
                 </div>
 
-                <!-- Highlight 3: DSC_0293.jpg -->
+                <!-- Highlight 3 -->
                 <div class="gallery-item events bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
                     <div class="relative h-64 overflow-hidden bg-gray-900">
                         <img src="DSC_0293.jpg" alt="Community gathering under ATLI Serenity tents" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -529,7 +529,7 @@
                     </div>
                 </div>
 
-                <!-- Highlight 4: DSC_0444.jpg -->
+                <!-- Highlight 4 -->
                 <div class="gallery-item events bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
                     <div class="relative h-64 overflow-hidden bg-gray-900">
                         <img src="DSC_0444.jpg" alt="Guest portrait capture during event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -545,7 +545,7 @@
                     </div>
                 </div>
 
-                <!-- Highlight 5: DSC_0529.jpg -->
+                <!-- Highlight 5 -->
                 <div class="gallery-item events bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
                     <div class="relative h-64 overflow-hidden bg-gray-900">
                         <img src="DSC_0529.jpg" alt="Traditional ceremony couple embrace" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -561,7 +561,7 @@
                     </div>
                 </div>
 
-                <!-- Highlight 6: DSC_0551.jpg -->
+                <!-- Highlight 6 -->
                 <div class="gallery-item events bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover-lift group">
                     <div class="relative h-64 overflow-hidden bg-gray-900">
                         <img src="DSC_0551.jpg" alt="Bride and groom event portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -975,6 +975,31 @@
                     item.style.display = 'none';
                 }
             });
+        }
+
+        // Intersection Observer for Video Auto Play/Pause & Unmute on Scroll
+        if (videoPlayer) {
+            const observerOptions = {
+                root: null,
+                threshold: 0.5
+            };
+
+            const videoObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        videoPlayer.muted = false;
+                        videoPlayer.play().catch(() => {
+                            videoPlayer.muted = true;
+                            videoPlayer.play();
+                        });
+                    } else {
+                        videoPlayer.pause();
+                        videoPlayer.muted = true;
+                    }
+                });
+            }, observerOptions);
+
+            videoObserver.observe(videoPlayer);
         }
     </script>
 </body>
